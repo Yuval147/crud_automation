@@ -1,6 +1,5 @@
 import requests
 
-from automation.conftest import base_url
 from automation.test_get_players import test_read_player
 
 
@@ -10,10 +9,10 @@ def test_create_player(base_url:str):
     data = {
         "player_name": "test",
         "team": "test",
-        "num_player": 11,
-        "goals": 11,
-        "assist": 11,
-        "transfer_market": 1111111
+        "num_player": 111,
+        "goals": 111,
+        "assist": 111,
+        "transfer_market": 1111112
     }
     response = requests.post(url, json= data)
     assert response.ok

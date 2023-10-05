@@ -5,7 +5,7 @@ def test_update_player(base_url:str,id:str):
     endpoint = f"/{id}"
     url = base_url + endpoint
     data ={
-    "player_name": "dolev",
+    "player_name": "dolev haziza",
     "team": "macabi",
     "id": 1,
     "assist": 2,
