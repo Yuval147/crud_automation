@@ -27,6 +27,7 @@ class Football(BaseModel):
     goals: int = Field(gt=1, lt=100)
     assist: int = Field(gt=1, lt=100)
     transfer_market: int = Field(gt=1, lt=10000000000)
+    country: str = Field(min_length=1)
 
 footballs = []
 
@@ -45,6 +46,7 @@ def crate_playres(football: Football, db: Session = Depends(get_db)):
     football_model.goals = football.goals
     football_model.assist = football.assist
     football_model.transfer_market = football.transfer_market
+    football_model.country = football.country
     db.add(football_model)
     db.commit()
     db.refresh(football_model)
@@ -83,4 +85,4 @@ def delet_player(playre_id: int, db: Session = Depends(get_db)):
     db.commit()
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=9000)
+    uvicorn.run(app, host="0.0.0.0", port=8600)

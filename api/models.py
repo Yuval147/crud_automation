@@ -11,3 +11,4 @@ class footballs(Base) :
     goals = Column(Integer)
     assist = Column(Integer)
     transfer_market = Column(Integer)
+    country = Column(String)
