@@ -27,4 +27,4 @@ This project is a FastAPI-based CRUD (Create, Read, Update, Delete) application 
 
 - Python 3.7 or higher
 - Pipenv (optional but recommended)
-- pytest (conftest)
+- pytest (conftest,fixtures)
