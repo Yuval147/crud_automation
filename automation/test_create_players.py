@@ -20,7 +20,7 @@ def test_create_player(base_url:str):
         print(json_response)
     else:
         print("API failed")
-        print(response.text)
+        print(response.content)
         print("response status code:", response.status_code)
 
 
@@ -45,7 +45,7 @@ def test_crate_player_detailsnotvalid(base_url:str):
         print(json_response)
     else:
         print("API failed")
-        print(response.text)
+        print(response.content)
         print("response status code:", response.status_code)
 
 
@@ -70,7 +70,7 @@ def test_crate_player_opposites(base_url:str):
         print(json_response)
     else:
         print("API failed")
-        print(response.text)
+        print(response.content)
         print("response status code:", response.status_code)
 
 ####### details value is null ########
@@ -93,5 +93,5 @@ def test_crate_player_nulldetails(base_url:str):
         print(json_response)
     else:
         print("API failed")
-        print(response.text)
+        print(response.content)
         print("response status code:", response.status_code)
